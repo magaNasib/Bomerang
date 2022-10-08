@@ -1,0 +1,44 @@
+header.question {
+  min-height: 3rem !important;
+}
+main {
+  background-size: cover;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  min-height: calc(100vh - 3.87rem);
+}
+.eachQuestion {
+  text-align: center;
+  min-height: 30rem;
+  display: flex;
+  width: 60rem;
+  margin: 0 auto;
+  flex-direction: column;
+  color: white;
+
+  justify-content: space-around;
+}
+.eachQuestion .answers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+a.backToDash {
+  display: block;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+.eachQuestion .button {
+  width: 28rem;
+  margin: 1rem;
+}
+.eachQuestion h2 {
+  color: white;
+  font-size: 3rem;
+}

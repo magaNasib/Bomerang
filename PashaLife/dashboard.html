@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/2837c82e13.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <title>PashaLife</title>
+  </head>
+  <body>
+    <header class="dashboard">
+      <section class="header container">
+        <nav>
+          <div class="flex justify-between">
+            <div class="logo"><a href="index.html">Boomerang</a></div>
+            <div class="logBtns">
+              <a href="#" class="mr-2">
+                <i class="fa-regular fa-heart"></i>
+                <span id="totalPoint"></span>
+              </a>
+              <a href="#" class="profileBtn">
+                <span id="myBtn" class="dropbtn"
+                  >Mahammad <i class="border fa-regular fa-user"></i
+                ></span>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#">My Discounts</a>
+                  <a href="#">Profile</a>
+                  <a href="#">Logout</a>
+                </div>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="welcome">Welcome Mahammad</h1>
+        <p class="info">Here you can choose what you want</p>
+      </div>
+      <section class="choices">
+        <div class="container">
+          <div class="flex justify-between">
+            <div class="item">
+              <a href="vlessons.html" class="bg-light">
+                <div class="flex bordered">
+                  <div class="logo">
+                    <img src="img/videolesson.jpg" alt="" />
+                  </div>
+                  <div class="content">Video lessons</div>
+                </div>
+              </a>
+            </div>
+            <div class="item">
+              <a href="question.html" class="bg-light">
+                <div class="flex bordered">
+                  <div class="logo">
+                    <img src="img/test.png" alt="" />
+                  </div>
+                  <div class="content">Test Yourself</div>
+                </div>
+              </a>
+            </div>
+            <div class="item">
+              <a href="game/index.html" class="bg-light">
+                <div class="flex bordered">
+                  <div class="logo">
+                    <img src="img/game.jpg" alt="" />
+                  </div>
+                  <div class="content">Game</div>
+                </div>
+              </a>
+            </div>
+            <div class="item">
+              <a href="bonuses.html" class="bg-light">
+                <div class="flex bordered">
+                  <div class="logo">
+                    <img src="img/discount.jpg" alt="" />
+                  </div>
+                  <div class="content">Bonuses</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/2837c82e13.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+header.dashboard {
+  min-height: 3rem;
+}
+main {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  min-height: calc(100vh - 3.9rem);
+}
+.welcome {
+  color: white;
+  font-size: 3rem;
+  margin: 3rem 0;
+}
+.info {
+  font-size: 1.5rem;
+  color: lightgrey;
+}
+section {
+  color: white;
+}
+.choices {
+  margin: 4rem 0;
+  padding: 1rem;
+}
+.choices .item {
+  width: 25%;
+  color: black;
+  padding: 0.4rem;
+}
+.bordered img {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.bg-light {
+  width: 100%;
+  padding: 0.2rem;
+}
+.bordered {
+  background-color: white;
+  border-radius: 1rem;
+  height: 6rem;
+  width: 100% !important;
+  padding: 0.5rem;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.choices .item .logo {
+  width: 30%;
+}
+.choices .item .content {
+  width: 70%;
+  padding: 0 0.3rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* 
+-----------------------vlessons-------------------------------------- */
+section.courses .eachCourse {
+  padding: 0.8rem;
+  width: 25%;
+}
+section.courses .card {
+  border: 1px solid rgb(91, 108, 255);
+  border-radius: 0.5rem;
+}
+section.courses .courseContent {
+  padding: 1rem;
+  min-height: 8rem;
+}
+section.courses .eachCourse .top {
+  height: 13rem;
+  position: relative;
+  overflow: hidden;
+}
+
+section.courses .eachCourse .top img {
+  object-fit: cover;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay img {
+  width: 40%;
+  opacity: 0;
+  transition: 0.3s;
+  height: auto;
+}
+section.courses .eachCourse:hover .overlay img,
+section.courses .eachCourse:hover .overlay {
+  transform: scale(1.2);
+  opacity: 1;
+}
