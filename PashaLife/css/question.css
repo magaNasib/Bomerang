@@ -35,7 +35,7 @@ a.backToDash {
   text-decoration: underline;
 }
 .eachQuestion .button {
-  width: 28rem;
+  min-width: 80%;
   margin: 1rem;
 }
 .eachQuestion h2 {

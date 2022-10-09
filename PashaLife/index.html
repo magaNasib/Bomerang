@@ -140,6 +140,14 @@
     </header>
 
     <main></main>
+    <script>
+      getStorage();
+      function getStorage() {
+        if (localStorage.getItem("User") !== null) {
+          window.location.replace("dashboard.html");
+        }
+      }
+    </script>
     <script
       src="https://kit.fontawesome.com/2837c82e13.js"
       crossorigin="anonymous"

@@ -42,19 +42,33 @@
         </form>
       </div>
       <div class="form-container sign-in-container">
-        <form action="#">
-          <h1 style="padding-bottom: 15px">Login Now</h1>
-          <input type="email" name="email" placeholder="Email" />
-          <input type="password" name="password" placeholder="Password" />
+        <form action="#" method="post" id="form_login">
+          <h1 style="padding-bottom: 15px">Daxil ol</h1>
+          <input
+            type="text"
+            value="dunay"
+            id="email_id"
+            name="username"
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            id="password"
+            value="Dunay_123"
+            name="password"
+            placeholder="Password"
+          />
           <a href="#" style="padding-left: 150px; font-weight: bold">
-            Forgot Your Password?</a
+            Parolunuzu unutmusunuzmu?</a
           >
           <button style="margin-top: 10px" class="btnInLogin">
-            <a href="dashboard.html">Let Me In...</a>
+            <a type="submit">Daxil ol</a>
           </button>
           <h5>
-            New to here!
-            <a class="ghost" id="signUp" style="color: blue"><u>Sign Up</u></a>
+            Burada yenisiniz?
+            <a class="ghost" id="signUp" style="color: blue"
+              ><u>Qeydiyyat olun</u></a
+            >
           </h5>
         </form>
       </div>
@@ -77,6 +91,15 @@
         </div>
       </div>
     </div>
+    
+    <script>
+      getStorage();
+      function getStorage() {
+        if (localStorage.getItem("User") !== null) {
+          window.location.replace("dashboard.html");
+        }
+      }
+    </script>
     <script
       src="https://kit.fontawesome.com/2837c82e13.js"
       crossorigin="anonymous"
@@ -93,5 +116,6 @@
         container.classList.remove("right-panel-active");
       });
     </script>
+    <script src="js/login.js"></script>
   </body>
 </html>

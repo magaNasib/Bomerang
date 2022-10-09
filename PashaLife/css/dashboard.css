@@ -27,6 +27,9 @@ section {
   margin: 4rem 0;
   padding: 1rem;
 }
+.wrap {
+  flex-wrap: wrap;
+}
 .choices .item {
   width: 25%;
   color: black;
@@ -72,10 +75,14 @@ section.courses .eachCourse {
 section.courses .card {
   border: 1px solid rgb(91, 108, 255);
   border-radius: 0.5rem;
+  height: 25rem !important;
 }
 section.courses .courseContent {
   padding: 1rem;
   min-height: 8rem;
+}
+.courseContent p {
+  padding: 0.6rem 0;
 }
 section.courses .eachCourse .top {
   height: 13rem;
@@ -110,4 +117,39 @@ section.courses .eachCourse:hover .overlay img,
 section.courses .eachCourse:hover .overlay {
   transform: scale(1.2);
   opacity: 1;
+}
+
+@media screen and (max-width: 776px) {
+  html {
+    font-size: 15px;
+  }
+  .choices .item {
+    width: 50%;
+  }
+  section.courses .eachCourse {
+    width: 50%;
+  }
+  .companies .company {
+    width: 48% !important;
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    width: 98%;
+  }
+  .choices .item {
+    width: 100%;
+  }
+
+  .companies .company {
+    width: 100% !important;
+  }
+
+  section.courses .eachCourse {
+    width: 100%;
+  }
 }

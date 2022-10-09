@@ -9,14 +9,20 @@ body {
 }
 
 body {
-  background: #121213;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .alert-box {
@@ -31,31 +37,31 @@ body {
   top: 20%;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   padding: 0.5rem 1rem;
   background: #ddd;
   color: #121213;
   font-size: 1.15rem;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   z-index: 10;
   -webkit-transform: translateX(-50%) translateY(0);
-          transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0);
   opacity: 1;
   -webkit-animation: 0.3s opacity ease;
-          animation: 0.3s opacity ease;
+  animation: 0.3s opacity ease;
 }
 
 @-webkit-keyframes opacity {
   from {
     -webkit-transform: translateX(-50%) translateY(20%);
-            transform: translateX(-50%) translateY(20%);
+    transform: translateX(-50%) translateY(20%);
     opacity: 0;
   }
   to {
     -webkit-transform: translateX(-50%) translateY(0);
-            transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
     opacity: 1;
   }
 }
@@ -63,12 +69,12 @@ body {
 @keyframes opacity {
   from {
     -webkit-transform: translateX(-50%) translateY(20%);
-            transform: translateX(-50%) translateY(20%);
+    transform: translateX(-50%) translateY(20%);
     opacity: 0;
   }
   to {
     -webkit-transform: translateX(-50%) translateY(0);
-            transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
     opacity: 1;
   }
 }
@@ -76,26 +82,26 @@ body {
 .container {
   position: relative;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   max-width: 768px;
   height: 100%;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -106,27 +112,27 @@ body {
   top: 50%;
   left: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   width: 100%;
   background: #121213;
   color: #d7dadc;
   z-index: 10;
   padding: 1rem;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 0 100px rgba(0, 0, 0, 0.75);
-          box-shadow: 0 0 100px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.75);
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -141,7 +147,7 @@ body {
   opacity: 0;
   pointer-events: none;
   -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
+  transform: translateY(-30%);
 }
 
 .container .how .close {
@@ -151,7 +157,7 @@ body {
   height: 1.5rem;
   padding: 0 1rem;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   cursor: pointer;
 }
 
@@ -169,12 +175,12 @@ body {
 
 .container .how .close div.line-1 {
   -webkit-transform: translateY(11px);
-          transform: translateY(11px);
+  transform: translateY(11px);
 }
 
 .container .how .close div.line-2 {
   -webkit-transform: rotate(-90deg) translateX(-9px);
-          transform: rotate(-90deg) translateX(-9px);
+  transform: rotate(-90deg) translateX(-9px);
 }
 
 .container .how p {
@@ -220,8 +226,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -286,13 +292,13 @@ body {
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .container .nav .left .info svg {
@@ -317,13 +323,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .container .nav .right .settings svg {
@@ -346,14 +352,14 @@ body {
 .container .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  -ms-grid-rows: (1fr)[6];
-      grid-template-rows: repeat(6, 1fr);
+  -ms-grid-columns: (1fr) [5];
+  grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr) [6];
+  grid-template-rows: repeat(6, 1fr);
   gap: 5px;
   padding: 1rem;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container .grid .cell {
@@ -369,28 +375,28 @@ body {
   -webkit-transition: 300ms;
   transition: 300ms;
   -webkit-backface-visibility: visible;
-          backface-visibility: visible;
+  backface-visibility: visible;
 }
 
 @-webkit-keyframes rotation {
   to {
     -webkit-transform: rotateX(360deg);
-            transform: rotateX(360deg);
+    transform: rotateX(360deg);
   }
 }
 
 @keyframes rotation {
   to {
     -webkit-transform: rotateX(360deg);
-            transform: rotateX(360deg);
+    transform: rotateX(360deg);
   }
 }
 
 .container .grid .cell.anim {
   -webkit-transform: rotateX(0);
-          transform: rotateX(0);
+  transform: rotateX(0);
   -webkit-animation: 1s rotation ease;
-          animation: 1s rotation ease;
+  animation: 1s rotation ease;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -412,23 +418,23 @@ body {
 
 .container .grid .cell.active {
   -webkit-animation-delay: none;
-          animation-delay: none;
+  animation-delay: none;
   border: 2px solid #838383;
   -webkit-animation: 0.1s scale ease;
-          animation: 0.1s scale ease;
+  animation: 0.1s scale ease;
 }
 
 @-webkit-keyframes scale {
   from {
     -webkit-transform: scale(1.075);
-            transform: scale(1.075);
+    transform: scale(1.075);
   }
 }
 
 @keyframes scale {
   from {
     -webkit-transform: scale(1.075);
-            transform: scale(1.075);
+    transform: scale(1.075);
   }
 }
 
@@ -450,8 +456,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .container .keyboard .row .key {
@@ -485,7 +491,7 @@ body {
 .container .keyboard .row .key:active {
   background: #6b6b6b;
   -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 @media screen and (max-width: 768px) {

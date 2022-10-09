@@ -33,13 +33,12 @@
                 <span id="totalPoint"></span>
               </a>
               <a href="#" class="profileBtn">
-                <span id="myBtn" class="dropbtn"
-                  >Mahammad <i class="border fa-regular fa-user"></i
-                ></span>
+                <span id="myBtn" class="dropbtn"> </span
+                ><i class="border fa-regular fa-user"></i>
                 <div id="myDropdown" class="dropdown-content">
                   <a href="#">My Discounts</a>
                   <a href="#">Profile</a>
-                  <a href="#">Logout</a>
+                  <a href="logout.html">Logout</a>
                 </div>
               </a>
             </div>
@@ -83,6 +82,15 @@
         </div>
       </div>
     </main>
+
+    <script>
+      getStorage();
+      function getStorage() {
+        if (localStorage.getItem("User") === null) {
+          window.location.replace("index.html");
+        }
+      }
+    </script>
     <script
       src="https://kit.fontawesome.com/2837c82e13.js"
       crossorigin="anonymous"
@@ -90,5 +98,35 @@
     <script src="js/main.js"></script>
     <script src="js/dashboard.js"></script>
     <script src="js/question.js"></script>
+    <script>
+      function getUserData() {
+        const login = "http://172.16.68.220:8099/user/getUser";
+
+        fetch(login, {
+          method: "GET",
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            // "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/json",
+            Authorization: "Bearer" + " " + getStorage("User"),
+            // "Content-Type": "form-data",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById("myBtn").innerHTML = data.object.firstName;
+            document.getElementById("totalPoint").innerHTML = data.object.point;
+            if (data.error) {
+              alert("Error..."); /*displays error message*/
+            } else {
+              // window.location.replace('dashboard.html')
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      getUserData();
+    </script>
   </body>
 </html>

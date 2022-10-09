@@ -33,13 +33,12 @@
                 <span id="totalPoint"></span>
               </a>
               <a href="#" class="profileBtn">
-                <span id="myBtn" class="dropbtn"
-                  >Mahammad <i class="border fa-regular fa-user"></i
-                ></span>
+                <span id="myBtn" class="dropbtn">Mahammad </span
+                ><i class="border fa-regular fa-user"></i>
                 <div id="myDropdown" class="dropdown-content">
                   <a href="#">My Discounts</a>
                   <a href="#">Profile</a>
-                  <a href="#">Logout</a>
+                  <a href="logout.html">Logout</a>
                 </div>
               </a>
             </div>
@@ -50,19 +49,19 @@
 
     <main>
       <div class="container">
-        <h1 class="welcome">Welcome Mahammad</h1>
-        <p class="info">Here you can choose what you want</p>
+        <h1 class="welcome">Xoş gəldin <span id="nameOfUser"></span></h1>
+        <p class="info">Buradan istədiyin hər şeyi asanlıqla tapa bilərsən</p>
       </div>
       <section class="choices">
         <div class="container">
-          <div class="flex justify-between">
+          <div class="flex justify-between wrap">
             <div class="item">
               <a href="vlessons.html" class="bg-light">
                 <div class="flex bordered">
                   <div class="logo">
                     <img src="img/videolesson.jpg" alt="" />
                   </div>
-                  <div class="content">Video lessons</div>
+                  <div class="content">Video dərslər</div>
                 </div>
               </a>
             </div>
@@ -72,7 +71,7 @@
                   <div class="logo">
                     <img src="img/test.png" alt="" />
                   </div>
-                  <div class="content">Test Yourself</div>
+                  <div class="content">Özünü sına</div>
                 </div>
               </a>
             </div>
@@ -82,7 +81,7 @@
                   <div class="logo">
                     <img src="img/game.jpg" alt="" />
                   </div>
-                  <div class="content">Game</div>
+                  <div class="content">Oyna, Qazan</div>
                 </div>
               </a>
             </div>
@@ -92,7 +91,7 @@
                   <div class="logo">
                     <img src="img/discount.jpg" alt="" />
                   </div>
-                  <div class="content">Bonuses</div>
+                  <div class="content">Bonuslar</div>
                 </div>
               </a>
             </div>
@@ -100,11 +99,21 @@
         </div>
       </section>
     </main>
+
+    <script>
+      getStorage();
+      function getStorage() {
+        if (localStorage.getItem("User") === null) {
+          window.location.replace("index.html");
+        }
+      }
+    </script>
     <script
       src="https://kit.fontawesome.com/2837c82e13.js"
       crossorigin="anonymous"
     ></script>
     <script src="js/dashboard.js"></script>
     <script src="js/main.js"></script>
+    <script></script>
   </body>
 </html>

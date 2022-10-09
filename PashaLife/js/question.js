@@ -1,25 +1,47 @@
-let questions = [
-    {
-        title: "what is that?",
-        answers: ["me", "you", "we"],
-        corrAnsw: 1
-    }, {
-        title: "What is the Insureance?",
-        answers: ["Making money", "Spending money", "pass"],
-        corrAnsw: 2
-    },
-    {
-        title: "what is a Computer?",
-        answers: ["phone", "car", "item"],
-        corrAnsw: 0
-    }
-]
+let questions = []
 let titleOfQuestion = document.getElementById('titleOfQuestion');
 let answers = document.getElementById('answers');
 let currentIndex = 0;
 let currentPointOfCurrentGame = 0;
+getAllQuestions()
+function getAllQuestions() {
+    const login = "http://172.16.68.220:8099/question/getAllQuestion";
+    fetch(login, {
+        method: "GET",
+        headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+            Authorization: "Bearer" + " " + getStorage("User"),
+        },
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            for (let i of data.object) {
+                let myObj = {
+                    title: i.question,
+                    answers: [...i.answers],
+                    corrAnsw: i.rightAnswerIndex
+                }
+                questions.push(myObj)
+                console.log(i)
+            }
+            if (data.error) {
+                alert("Error..."); /*displays error message*/
+            } else {
+            }
+        })
+        .then(() => {
 
-showQuestion();
+            showQuestion();
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+}
+// setTimeout(() => {
+
+//     showQuestion();
+// }, 1000)
 
 
 
@@ -80,9 +102,50 @@ function showQuestion() {
         answers.innerHTML = `<div><h4>Your Point is  ${currentPointOfCurrentGame}</h4>
         <a href="dashboard.html" class="backToDash"><i class="fa-solid fa-arrow-left-long"></i>&nbsp;Back</a></div>
         `;
+        let myCurrentPoint = localStorage.getItem('totalPoint');
+        const login = "http://172.16.68.220:8099/user";
+
+        let myInfo = JSON.parse(localStorage.getItem('UserData'));
+        fetch(login, {
+            method: "PUT",
+            headers: {
+                Accept: "application/json, text/plain, */*",
+                // "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Type": "application/json",
+                Authorization: "Bearer" + " " + getStorage("User"),
+
+                // "Content-Type": "form-data",
+            },
+            body: JSON.stringify({
+                id: myInfo.id,
+                firstName: myInfo.firstName,
+                lastName: myInfo.lastName,
+                point: localStorage.getItem('totalPoint')
+
+            })
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                if (data.error) {
+                    alert("Error..."); /*displays error message*/
+                } else {
+                    // window.location.replace('dashboard.html')
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }
 
 
 
 }
 
+
+
+function getStorage(a) {
+    if (localStorage.getItem(a) !== null) {
+        return localStorage.getItem(a)
+    }
+}

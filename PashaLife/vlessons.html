@@ -39,7 +39,7 @@
                 <div id="myDropdown" class="dropdown-content">
                   <a href="#">My Discounts</a>
                   <a href="#">Profile</a>
-                  <a href="#">Logout</a>
+                  <a href="logout.html">Logout</a>
                 </div>
               </a>
             </div>
@@ -53,16 +53,16 @@
         <a href="#" onclick="window.history.go(-1); return false;"
           ><i class="fa-solid fa-arrow-left-long"></i>&nbsp; back</a
         >
-        <h1 class="welcome">Online video courses</h1>
-        <p class="info">Here you can choose what you want to learn</p>
+        <h1 class="welcome">Onlayn video kurslar</h1>
+        <p class="info">Buradan istədiyin hər şeyi asanlıqla tapa bilərsən</p>
       </div>
       <section class="courses">
         <div class="container">
-          <div class="flex">
+          <div class="flex wrap">
             <a href="#" class="eachCourse">
               <div class="card">
                 <div class="top">
-                  <img src="img/insurance-icon.svg" alt="" />
+                  <img src="img/dollar-01-1.png" alt="" />
                   <div class="overlay">
                     <img
                       src="img/pngfind.com-youtube-play-button-png-576546.png"
@@ -71,9 +71,10 @@
                   </div>
                 </div>
                 <div class="courseContent">
-                  <h2>What is Insurance?</h2>
+                  <h2>Həyat sığortası nədir?</h2>
                   <p>
-                    Here you can learn what is Insurance and how does it work...
+                    "Gəlirli həyat sığortası" müştərilərimiz üçün hazırladığımız
+                    xüsusi yığım məhsuludur.
                   </p>
                 </div>
               </div>
@@ -81,7 +82,7 @@
             <a href="#" class="eachCourse">
               <div class="card">
                 <div class="top">
-                  <img src="img/insurance-icon.svg" alt="" />
+                  <img src="img/icbari-01.png" alt="" />
                   <div class="overlay">
                     <img
                       src="img/pngfind.com-youtube-play-button-png-576546.png"
@@ -90,9 +91,10 @@
                   </div>
                 </div>
                 <div class="courseContent">
-                  <h2>What is Insurance?</h2>
+                  <h2>Həyat Sığortası</h2>
                   <p>
-                    Here you can learn what is Insurance and how does it work...
+                    İş yerində bədbəxt hadisə baş verdikdə bu, təkcə sizin üçün
+                    deyil, həm də işçiləriniz üçün əlavə xərcdir.
                   </p>
                 </div>
               </div>
@@ -109,8 +111,8 @@
                   </div>
                 </div>
                 <div class="courseContent">
-                  <h2>What is Cashback?</h2>
-                  <p>How to get more Cashback...</p>
+                  <h2>Cashback nədir?</h2>
+                  <p>Necə daha çox cashback...</p>
                 </div>
               </div>
             </a>
@@ -137,6 +139,15 @@
         </div>
       </section>
     </main>
+
+    <script>
+      getStorage();
+      function getStorage() {
+        if (localStorage.getItem("User") === null) {
+          window.location.replace("index.html");
+        }
+      }
+    </script>
     <script
       src="https://kit.fontawesome.com/2837c82e13.js"
       crossorigin="anonymous"

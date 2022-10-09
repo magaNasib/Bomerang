@@ -160,3 +160,12 @@ header .bottomRight {
 header .bottomRight p {
   margin: 0 0.2rem;
 }
+@media screen and (max-width: 567px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 98%;
+  }
+}
